@@ -1,0 +1,44 @@
+Check the Sum:
+
+#include<iostream>
+using namespace std;
+int main()
+ {
+     int t, a, b, c;
+     cin>>t;
+	for(int i=0;i<t;i++){
+	     cin>>a>>b>>c;
+	    if(a+b==c || b+c==a || a+c==b){
+	        cout<<"YES\n";
+	    }
+	    else{
+	        cout<<"NO\n";
+	    }
+	}
+	return 0;
+}
+
+Pairs of Adjacent Elements:
+
+#include<iostream>
+using namespace std;
+int main()
+ {
+     int t;
+     cin>>t;
+     for(int j=0;j<t;j++){
+         int n;
+         cin>>n;
+         int arr[n];
+         for(int i=0;i<n;i++){
+            cin>>arr[i];
+         }
+         int count=0;
+        for(int k=0;k<n;k++){
+	        if(arr[k]+1==arr[k+1])
+	            count++;
+	    }
+	    cout<<count<<endl;
+     }
+	return 0;
+}
