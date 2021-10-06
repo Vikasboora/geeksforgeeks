@@ -1,0 +1,67 @@
+Sum of Product of Digits:
+
+int sumOfProductOfDigits(int n1, int n2)
+{
+    //Your code here
+     if(n1==0 || n2==0)
+    {
+        return 0;
+    }
+    
+    return (n1%10)*(n2%10)+sumOfProductOfDigits(n1/10,n2/10);
+}
+
+
+Sum of Maximum and Minimum:
+
+int sumOfMaxandMin(int arr[],int n)
+{
+    //Your code here
+    int maxx=INT_MIN;
+    int minn=INT_MAX;
+    
+    for(int i=0;i<n;i++)
+    {
+        if(arr[i]>maxx)
+        {
+            maxx=arr[i];
+        }
+        
+        if(arr[i]<minn)
+        {
+            minn=arr[i];
+        }
+    }
+    
+    
+    return maxx+minn;
+}
+
+
+Longest Subarray Length:
+
+int longestLength(int arr[],int n)
+{
+   //Your code here
+   int maxLength=0;
+    
+    for(int i=0;i<n;i++)
+    {
+        
+        int currlength=1;
+        
+        while(i+1<n && arr[i+1]==arr[i])
+        {
+            currlength++;
+            i++;
+        }
+        
+        if(currlength>maxLength)
+        {
+            maxLength=currlength;
+            
+        }
+    }
+    
+    return maxLength;
+}
